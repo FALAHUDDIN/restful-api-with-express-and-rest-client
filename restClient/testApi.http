@@ -1,0 +1,61 @@
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+###
+//test server
+GET {{host}}/ HTTP/1.1
+Content-type: {{contentType}}
+
+###
+//test public image
+GET {{host}}/testImage.jfif HTTP/1.1
+Content-type: {{contentType}}
+
+###
+//create request
+POST {{host}}/contact HTTP/1.1
+Content-type: {{contentType}}
+
+{
+    "firstName": "Falahuddin",
+    "lastName": "Abu Seman",
+    "email": "falahuddinas@gmail.com",
+    "company": "TDCX",
+    "phone": "1111111111"
+}
+
+###
+//read request return all id
+GET {{host}}/contact HTTP/1.1
+Content-type: {{contentType}}
+
+###
+//read request return one id
+GET {{host}}/contact/601f0686e32fd93c5c0b7189 HTTP/1.1
+Content-type: {{contentType}}
+
+###
+//update request return one id
+PUT {{host}}/contact/601f0686e32fd93c5c0b7189 HTTP/1.1
+Content-type: {{contentType}}
+
+{
+    "firstName": "Falahuddin",
+    //"lastName": "Abu Seman",
+    //"email": "falahuddinas@gmail.com",
+    //"company": "TDCX",
+    //"phone": "55555555"
+}
+
+###
+//delete request return one id
+PUT {{host}}/contact/601f0686e32fd93c5c0b7189 HTTP/1.1
+Content-type: {{contentType}}
+
+{
+    "firstName": "Falahuddin",
+    //"lastName": "Abu Seman",
+    //"email": "falahuddinas@gmail.com",
+    //"company": "TDCX",
+    //"phone": "2322"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "realis-attend",
+  "version": "1.0.0",
+  "description": "realis-attend backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FALAHUDDIN/realis-attend-backend.git"
+  },
+  "author": "Falahuddin Abu Seman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FALAHUDDIN/realis-attend-backend/issues"
+  },
+  "homepage": "https://github.com/FALAHUDDIN/realis-attend-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.15"
+  }
+}
